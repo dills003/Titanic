@@ -12887,7 +12887,7 @@ Fill in the missing code below so that the function will make this prediction.<b
         <span class="n">testSex</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
         <span class="n">testAge</span> <span class="o">=</span> <span class="n">passenger</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span>
         
-        <span class="k">if</span> <span class="p">((</span><span class="n">testSex</span>  <span class="o">==</span> <span class="s1">&#39;male&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">((</span><span class="n">testAge</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">testAge</span><span class="p">)))):</span> <span class="c1">#without nan check, did worse than before</span>
+        <span class="k">if</span> <span class="p">((</span><span class="n">testSex</span>  <span class="o">==</span> <span class="s1">&#39;male&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">((</span><span class="n">testAge</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">testAge</span><span class="p">)))):</span> <span class="c1">#without nan check, did worse than before</span>
             <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#males not so lucky</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#females and young males live</span>
@@ -12936,7 +12936,7 @@ Fill in the missing code below so that the function will make this prediction.<b
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predictions have an accuracy of 79.24%.
+<pre>Predictions have an accuracy of 79.35%.
 </pre>
 </div>
 </div>
